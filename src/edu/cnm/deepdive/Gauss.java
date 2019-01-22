@@ -6,6 +6,9 @@ public class Gauss {
 
   public static void main(String[] args) {
     int upperLimit = DEFAULT_UPPER_LIMIT;
+    if (args.length > 0) {
+      upperLimit = Integer.parseInt(args[0]);
+    }
     long sum = triangleSum(upperLimit);
     System.out.printf("Sum from 1 to %d = %,d%n", upperLimit, sum);
   }
